@@ -3,12 +3,13 @@
 <suite name="api-autotest">
      <test name="testcases">
         <classes>
-           <class name="com.test.api.TestNGClass.IdAuth"></class>
+           <!-- <class name="com.test.api.TestNGClass.IdAuth"></class> -->
+           <class name="com.test.api.TestNGClass.PostText"></class>
         </classes>
      
      </test>
-     <listeners>
+     <!-- <listeners>
        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
        <listener class-name="org.uncommons.reportng.JUnitReporter"></listener>
-     </listeners>
+     </listeners> -->
 </suite>

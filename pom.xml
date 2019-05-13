@@ -6,154 +6,110 @@
 	<artifactId>mavenDemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<xmlFileName>testng.xml</xmlFileName>
-		<aspectj.version>1.8.10</aspectj.version>
-		</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.11</version>
+	<!--allure版本信息-->
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <timestamp>2017-05-16_18_56_43</timestamp>
+        <allure.version>1.4.23</allure.version>
+        <aspectj.version>1.8.10</aspectj.version>
+    </properties>
+
+    <dependencies>
+       <dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.28</version>
 		</dependency>
-		<dependency>
-			<groupId>org.apache.maven.reporting</groupId>
-			<artifactId>maven-reporting-api</artifactId>
-			<version>2.0.9</version>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.testng</groupId>
-					<artifactId>testng</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-		<!-- 依赖Guice -->
-		<dependency>
-			<groupId>com.google.inject</groupId>
-			<artifactId>guice</artifactId>
-			<version>3.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.uncommons</groupId>
-			<artifactId>reportng</artifactId>
-			<version>1.1.4</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-surefire-plugin</artifactId>
-			<version>2.18.1</version>
-			<type>maven-plugin</type>
-		</dependency>
-		<dependency>
-			<groupId>com.beust</groupId>
-			<artifactId>jcommander</artifactId>
-			<version>1.64</version>
-		</dependency>
-		<dependency>
-			<groupId>net.sourceforge.jexcelapi</groupId>
-			<artifactId>jxl</artifactId>
-			<version>2.6.10</version>
-		</dependency>
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>2.53.0</version>
-		</dependency>
-		<!--allure的testng插件 -->
-		<dependency>
-			<groupId>ru.yandex.qatools.allure</groupId>
-			<artifactId>allure-testng-adaptor</artifactId>
-			<version>1.5.2</version>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.5</version>
-			<scope>test</scope>
-		</dependency>
-		<!-- <dependency>
-		<groupId>io.qameta.allure</groupId>
-		<artifactId>allure-testng</artifactId>
-		<version>LAST_VERSION</version>
-		<scope>test</scope>
-		</dependency> -->
-		<dependency>
-		    <groupId>io.qameta.allure</groupId>
-		    <artifactId>allure-testng</artifactId>
-		    <version>2.10.0</version>
-		</dependency>
-	</dependencies>
-	<build> 
-	<!-- 此处可以定义生成war包的名字；将WebProject项目打包成WebProject.war自动部署到tomcat服务器的webapps目录下面 -->
-    <finalName>WebProject</finalName>
-    <!-- 利用cargo插件把项目部署到远程的tomcat容器中 -->  
-		<plugins>
-		  <plugin>
-              <groupId>org.codehaus.cargo</groupId>
-              <artifactId>cargo-maven2-plugin</artifactId>
-                <version>1.2.3</version>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>2.53.0</version>
+        </dependency>
+        <!--allure的testng插件-->
+        <dependency>
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-testng-adaptor</artifactId>
+            <version>1.5.2</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!--maven测试插件以及配置信息-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.18.1</version>
                 <configuration>
-                    <container>
-                          <!-- 指明使用的tomcat服务器版本，要和已经启动tomcat版本一致 -->
-                        <containerId>tomcat7x</containerId>
-                        <type>remote</type>
-                    </container>
-                    <configuration>
-                        <type>runtime</type> 
-                        <!-- 使用之前指定的username和password -->
-                        <cargo.remote.username>username</cargo.remote.username> 
-                        <cargo.remote.password>password</cargo.remote.password> 
-                        <!-- 此处tomcat管理的url对应的要是已经启动的tomcat地址 -->
-                        <cargo.tomcat.manager.url>http://127.0.0.1:8080/manager</cargo.tomcat.manager.url> 
-                    </configuration>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>./src/main/java/testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                    <argLine>
+                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                    </argLine>
+                    <!--生成allure-result的目录-->
+                    <systemProperties>
+                        <property>
+                            <name>allure.results.directory</name>
+                            <value>./target/${timestamp}/allure-results</value>
+                        </property>
+                    </systemProperties>
                 </configuration>
-                <executions>  
-                  <execution>  
-                      <phase>deploy</phase>  
-                      <goals>  
-                          <goal>redeploy</goal>  
-                      </goals>  
-                  </execution>  
-              </executions>
-          </plugin>
+                <!--allure需要的aspectjweaver插件-->
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
 
+            <!--本地显示测试报告需要jetty插件,-->
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.2.10.v20150310</version>
+                <configuration>
+                    <webAppSourceDirectory>${project.build.directory}/1234/site/allure-maven-plugin</webAppSourceDirectory>
+                    <stopKey>stop</stopKey>
+                    <stopPort>1234</stopPort>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
-		
-		
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.0.2</version>
-				<configuration>
-					<source>1.8</source>        <!-- //////////// -->
-					<target>1.8</target>
-				</configuration>
-			</plugin>
-			<!-- <plugin> <artifactId>maven-surefire-plugin</artifactId> <configuration> 
-				<testFailureIgnore>true</testFailureIgnore> //////////// <includes> <include>*.java</include> 
-				//////////// </includes> <excludes> </excludes> </configuration> </plugin> -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.20</version>
-				<configuration>
-					<argLine>
-						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-					</argLine>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>org.aspectj</groupId>
-						<artifactId>aspectjweaver</artifactId>
-						<version>${aspectj.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
+    <!--allure的report插件，生成html报告,配置case以及bug地址-->
+    <reporting>
+        <excludeDefaults>true</excludeDefaults>
+        <plugins>
+            <plugin>
+                <groupId>ru.yandex.qatools.allure</groupId>
+                <artifactId>allure-maven-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <!--生成报告所需result源文件目录-->
+                    <resultsDirectory>./${timestamp}/allure-results</resultsDirectory>
+                    <!--@Issue以及@TestCaseId中的链接配置，%s为id占位符-->
+                    <properties>
+                        <allure.issues.tracker.pattern>http://122.225.68.74:8082/browse/%s</allure.issues.tracker.pattern>
+                        <allure.tests.management.pattern>http://122.225.68.74:8082/browse/%s</allure.tests.management.pattern>
+                    </properties>
 
-		</plugins>
-	</build>
+                </configuration>
+
+            </plugin>
+        </plugins>
+        <!--设置site目录-->
+        <outputDirectory>${project.build.directory}/${timestamp}/site</outputDirectory>
+    </reporting>
+
 
 </project>

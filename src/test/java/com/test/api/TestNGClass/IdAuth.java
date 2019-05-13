@@ -1,98 +1,175 @@
 package com.test.api.TestNGClass;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
+import org.testng.collections.Lists;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.BeforeClass;
+
+import java.util.Set;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterSuite;
 
 public class IdAuth {
-	  @Test(dataProvider = "dp")
-	  public void f(Integer n, String s) {
-		  System.out.println("===iiiiiii====================================oooooooooooooooooooooo\niiiiiii====================================oooooooooooooooooooooo\niiiiiii====================================oooooooooooooooooooooo\n");
-	  }
-	  @BeforeMethod
-	  public void beforeMethod() {
-		  System.out.println("=======  beforeMethod   =========\n");
-	  }
+  WebDriver  driver;
+  @Test(dataProvider="dp")
+  public void w(Integer n, String s) throws Exception {
+	  System.out.println("n is "+n);
+	  System.out.println("s is "+s);
+	  Assert.assertEquals(Integer.valueOf(2), n);
+  }
+  @Test
+  public void f() throws InterruptedException {
+	  //´ò¿ªÁ´½Ó
+	  System.setProperty("webdriver.chrome.driver",
+				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");
+	  driver.get("http://192.168.139.196:8086/cdzx/admin/login");
+	  System.out.println("=======  ´ò¿ªÁ´½Ó   =========\n");
+	  
+		//µÈ´ýÔªËØ³öÏÖ  
+		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")));
+	    Thread.sleep(5000);
+	    //ÊäÈë²éÑ¯¹Ø¼ü×Ö
+	    
+		driver.findElement(By.id("username")).sendKeys("admin");
+		driver.findElement(By.id("password")).sendKeys("Intasect_123");
+		Thread.sleep(2000);
+		//µã»÷²éÑ¯°´Å¥
+		//driver.findElement(By.id(PageConstant.BTNKEY)).click();
+		driver.findElement(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")).click();
+		
+		//ÕÒµ½²Ëµ¥
+		//*[@id="LAY-system-side-menu"]/li[1]/a
+		 Thread.sleep(5000);
+		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/a")));
+		driver.findElement(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/a")).click();
+		//´ò¿ªÐÂÔöÒ¶Æ¬
+		//*[@id="LAY-system-side-menu"]/li[1]/dl/dd[1]/a
+		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/dl/dd[1]/a")));
+		driver.findElement(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/dl/dd[1]/a")).click();
+		Thread.sleep(5000);
+		
+		driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"LAY_app_body\"]/div[2]/iframe")));
+		
+		WebElement ths= driver.findElement(By.id("adduser"));
+		if(ths == null) {
+			driver.close();     
+		}else {
+			ths.click();
+		}
+		//driver.findElement(By.id("")).click();
+		 Thread.sleep(10000);
+		 driver.switchTo().defaultContent();
+		 String parentWindowHandler = driver.getWindowHandle();
+		 String subWindowHandler = null;
+		 //driver.switchTo().frame(0);
+		 System.out.println(driver.getWindowHandles());
+		 
+		 WebElement ele = driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]"));
+		 driver.switchTo().frame(ele);
+		/* Set<String> handles = driver.getWindowHandles()	;
+		 for (String windowHandle : handles) {
+		      subWindowHandler = windowHandle;
+		 }*/
+		/* if(subWindowHandler != null && !subWindowHandler.equals(parentWindowHandler)){
+			 driver.switchTo().window(subWindowHandler);
+		     driver.close();
+		     driver.switchTo().window(parentWindowHandler);
+		 }*/
+		 
+		 /*(new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"layui-layer1\"]")));*/
+		//±£´æ°´Å¥
+		//*[@id="layui-layer1"]/div[3]/a[1]
+		/*(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"layui-layer1\"]/div[3]/a[1]")));
+		driver.findElement(By.xpath("//*[@id=\"layui-layer1\"]/div[3]/a[1]")).click();
+		*/
+		//¸³Öµ
+		 
+		driver.findElement(By.id("user.USERNAME")).sendKeys("zhangsan1");
+		driver.findElement(By.id("user.EMAIL")).sendKeys("471255559@qq.com");
+		driver.findElement(By.id("user.MOBILE")).sendKeys("18482176779");
+		driver.findElement(By.id("user.PASSWORD")).sendKeys("admin");
+		//×´Ì¬
+		WebElement adrOption=driver.findElement(By.xpath("//select[@id=\"user.ENABLE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", adrOption);
+		
+		//ÓÃ»§ÀàÐÍ 
+		WebElement usertype=driver.findElement(By.xpath("//select[@id=\"user.USERTYPE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", usertype);
+		//driver.findElement(By.id("user.ENABLE")).sendKeys("Õý³£");//×´Ì¬
+		//driver.findElement(By.id("user.USERTYPE")).sendKeys("¹ÜÀíÔ±");//ÓÃ»§ÀàÐÍ
+		driver.findElement(By.id("user.REALNAME")).sendKeys("Ê®ÒÚ");
+		//driver.findElement(By.id("user.BIRTHDAY")).sendKeys("0816");
+		WebElement gender=driver.findElement(By.xpath("//select[@id=\"user.GENDER\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", gender); 
+		
+		driver.findElement(By.id("user.IDENTIFY")).sendKeys("513030199908440222");
+		driver.switchTo().defaultContent();
+		//µã»÷±£´æ
+		driver.findElement(By.xpath("//*[@id=\"layui-layer1\"]/div[3]/a[1]")).click();
+		Thread.sleep(5000);
+		//ÅÐ¶ÏÊÇ·ñ±£´æ³É¹¦
+		
+		
+  }
+  @BeforeMethod
+  public void beforeMethod() {
+	  
+  }
 
-	  @AfterMethod
-	  public void afterMethod() {
-		  System.out.println("=======  afterMethod   =========\n");
-	  }
+  @AfterMethod
+  public void afterMethod() {
+  }
 
 
-	  @DataProvider
-	  public Object[][] dp() {
-	    return new Object[][] {
-	      new Object[] { 1, "a" },
-	      new Object[] { 2, "b" },
-	    };
-	  }
-	  @BeforeClass
-	  public void beforeClass() {
-		  System.out.println("=======  beforeClass   =========\n");
-	  }
+  @DataProvider
+  public Object[][] dp() {
+    return new Object[][] {
+      new Object[] { 1, "a" },
+      new Object[] { 2, "b" },
+    };
+  }
+  @BeforeClass
+  public void beforeClass() {
+	  System.setProperty("webdriver.chrome.driver",
+				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");
+	  driver = new ChromeDriver();
+	
+  }
 
-	  @AfterClass
-	  public void afterClass() {
-		  System.out.println("=======  afterClass   =========\n");
-	  }
+  @AfterClass
+  public void afterClass() {
+	  driver.close();
+  }
 
-	  @BeforeTest
-	  public void beforeTest() {
-		  System.out.println("=======  beforeTest   =========\n");
-	  }
+  @BeforeTest
+  public void beforeTest() {
+  }
 
-	  @AfterTest
-	  public void afterTest() {
-		  System.out.println("=======  afterTest   =========\n");
-	  }
+  @AfterTest
+  public void afterTest() {
+  }
 
-	  @BeforeSuite
-	  public void beforeSuite() throws InterruptedException {
-		  System.out.println("=======  beforeSuite   =========\n");
-		  
-		  //æ‰“å¼€é“¾æŽ¥
-		  System.setProperty("webdriver.chrome.driver",
-					"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");
-		  WebDriver  driver = new ChromeDriver();
-		  driver.get("http://192.168.139.196:8086/cdzx/admin/login");
-		  System.out.println("=======  æ‰“å¼€é“¾æŽ¥   =========\n");
-		  
-			//ç­‰å¾…å…ƒç´ å‡ºçŽ°  
-			(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")));
-		    Thread.sleep(5000);
-		    //è¾“å…¥æŸ¥è¯¢å…³é”®å­—
-		    
-			driver.findElement(By.id("username")).sendKeys("admin33");
-			driver.findElement(By.id("password")).sendKeys("123456");
-			Thread.sleep(2000);
-			//ç‚¹å‡»æŸ¥è¯¢æŒ‰é’®
-			//driver.findElement(By.id(PageConstant.BTNKEY)).click();
-			driver.findElement(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")).click();
-			
-			//driver.findElement(By.xpath(xpathExpression)).click();
-			
-			Thread.sleep(5000);
-		  
-		  
-	  }
+  @BeforeSuite
+  public void beforeSuite() {
+  }
 
-	  @AfterSuite
-	  public void afterSuite() {
-		  System.out.println("=======  afterSuite   =========\n");
-	  }
-
+  @AfterSuite
+  public void afterSuite() {
+  }
 
 }
