@@ -2,6 +2,10 @@ package com.test.api.TestNGClass;
 
 import org.testng.annotations.Test;
 import org.testng.collections.Lists;
+
+import ru.yandex.qatools.allure.annotations.Description;
+import ru.yandex.qatools.allure.annotations.Step;
+
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
@@ -33,6 +37,8 @@ public class IdAuth {
 	  Assert.assertEquals(Integer.valueOf(2), n);
   }
   @Test
+  @Step("打开cdzx登陆页面实行免登操作")
+  @Description("测试allure report")
   public void f() throws InterruptedException {
 	  //打开链接
 	  System.setProperty("webdriver.chrome.driver",
