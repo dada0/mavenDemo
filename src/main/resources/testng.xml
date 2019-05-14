@@ -5,7 +5,7 @@
             <class name="com.test.api.TestNGClass.IdAuth"></class> 
            <!-- <class name="com.test.api.TestNGClass.PostText"></class> -->
            <methods>
-                <include name="f" />
+                
                  <include name="baiduSearchTest" />
                 <include name="sougouSearchTest" />
             </methods>

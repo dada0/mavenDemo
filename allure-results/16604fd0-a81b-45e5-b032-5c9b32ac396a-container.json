@@ -1,0 +1,1 @@
+{"uuid":"16604fd0-a81b-45e5-b032-5c9b32ac396a","name":"com.test.api.TestNGClass.PostText.runAfterMethod","description":"","start":1557829072953,"stop":1557829072954,"children":["7d77cbda-da8b-475d-8bac-dc12112685d6"],"afters":[{"name":"runAfterMethod","status":"passed","stage":"finished","description":"","start":1557829072954,"stop":1557829072954}]}

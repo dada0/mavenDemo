@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="277" started-at="2019-05-14T10:00:08Z" finished-at="2019-05-14T10:00:08Z">
+  <suite name="Default suite" duration-ms="283" started-at="2019-05-14T10:22:10Z" finished-at="2019-05-14T10:22:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="277" started-at="2019-05-14T10:00:08Z" finished-at="2019-05-14T10:00:08Z">
+    <test name="Default test" duration-ms="283" started-at="2019-05-14T10:22:10Z" finished-at="2019-05-14T10:22:11Z">
       <class name="com.test.api.TestNGClass.IdAuth">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="beforeSuite" is-config="true" duration-ms="18" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="beforeSuite" is-config="true" duration-ms="21" started-at="2019-05-14T18:22:10Z" finished-at="2019-05-14T18:22:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="beforeTest" is-config="true" duration-ms="1" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="beforeTest" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:10Z" finished-at="2019-05-14T18:22:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:10Z" finished-at="2019-05-14T18:22:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:10Z" finished-at="2019-05-14T18:22:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="baiduSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="baiduSearchTest" duration-ms="93" started-at="2019-05-14T18:00:08Z" description="百度搜索" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="FAIL" signature="baiduSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="baiduSearchTest" duration-ms="90" started-at="2019-05-14T18:22:10Z" description="百度搜索" finished-at="2019-05-14T18:22:10Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -58,15 +58,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- baiduSearchTest -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="FAIL" signature="f()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="f" duration-ms="62" started-at="2019-05-14T18:00:08Z" description="测试新增人员" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="FAIL" signature="f()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="f" duration-ms="72" started-at="2019-05-14T18:22:11Z" description="测试新增人员" finished-at="2019-05-14T18:22:11Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -101,11 +101,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="FAIL" signature="sougouSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="sougouSearchTest" duration-ms="9" started-at="2019-05-14T18:00:08Z" description="搜狗搜索" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="FAIL" signature="sougouSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="sougouSearchTest" duration-ms="11" started-at="2019-05-14T18:22:11Z" description="搜狗搜索" finished-at="2019-05-14T18:22:11Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
@@ -140,19 +136,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sougouSearchTest -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="w(java.lang.Integer, java.lang.String)[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="w" duration-ms="26" started-at="2019-05-14T18:00:08Z" data-provider="dp" finished-at="2019-05-14T18:00:08Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="FAIL" signature="w(java.lang.Integer, java.lang.String)[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="w" duration-ms="21" started-at="2019-05-14T18:22:11Z" data-provider="dp" finished-at="2019-05-14T18:22:11Z">
           <params>
             <param index="0">
               <value>
@@ -206,15 +202,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- w -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="w(java.lang.Integer, java.lang.String)[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="w" duration-ms="9" started-at="2019-05-14T18:00:08Z" data-provider="dp" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="w(java.lang.Integer, java.lang.String)[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="w" duration-ms="9" started-at="2019-05-14T18:22:11Z" data-provider="dp" finished-at="2019-05-14T18:22:11Z">
           <params>
             <param index="0">
               <value>
@@ -230,19 +226,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- w -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="afterClass" is-config="true" duration-ms="1" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@7243145f]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-05-14T18:00:08Z" finished-at="2019-05-14T18:00:08Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@5927f904]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-05-14T18:22:11Z" finished-at="2019-05-14T18:22:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
