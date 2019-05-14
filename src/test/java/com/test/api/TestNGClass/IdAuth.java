@@ -146,6 +146,7 @@ public class IdAuth extends BaseTest {
 		
 		
   }
+ 
   @BeforeMethod
   public void beforeMethod() {
 	  

@@ -21,9 +21,14 @@ public class TestFailListener extends TestListenerAdapter {
 		super.onTestFailure(tr);
 		BaseTest bt = (BaseTest) tr.getInstance();
 		WebDriver driver = bt.getDriver();
-		takePhoto(driver);
-		logCaseStep(tr);
-		exceptedResult(tr);
+		if(driver != null) {
+			takePhoto(driver);
+			logCaseStep(tr);
+			exceptedResult(tr);
+			
+		}
+		
+		
 	}
 	
 

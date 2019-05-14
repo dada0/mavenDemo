@@ -7,11 +7,14 @@
         <methods>
           <include name="afterTest"/>
           <include name="afterSuite"/>
+          <include name="baiduSearchTest"/>
           <include name="beforeSuite"/>
+          <include name="sougouSearchTest"/>
           <include name="beforeMethod"/>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
           <include name="afterClass"/>
+          <include name="f"/>
           <include name="beforeClass"/>
           <include name="w" invocation-numbers="0"/>
         </methods>
