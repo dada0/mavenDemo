@@ -9,6 +9,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.BeforeClass;
 
 import java.util.Set;
@@ -27,22 +28,20 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
-
-public class IdAuth {
-  WebDriver  driver;
+public class IdAuth extends BaseTest {
   @Test(dataProvider="dp")
   public void w(Integer n, String s) throws Exception {
 	  System.out.println("n is "+n);
 	  System.out.println("s is "+s);
 	  Assert.assertEquals(Integer.valueOf(2), n);
   }
-  @Test
+  @Test(description = "测试新增人员")
   @Step("打开cdzx登陆页面实行免登操作")
   @Description("测试allure report")
   public void f() throws InterruptedException {
 	  //打开链接
-	  System.setProperty("webdriver.chrome.driver",
-				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");
+	 /* System.setProperty("webdriver.chrome.driver",
+				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");*/
 	  driver.get("http://192.168.139.196:8086/cdzx/admin/login");
 	  System.out.println("=======  打开链接   =========\n");
 	  
@@ -151,15 +150,15 @@ public class IdAuth {
   }
   @BeforeClass
   public void beforeClass() {
-	  System.setProperty("webdriver.chrome.driver",
+	 /* System.setProperty("webdriver.chrome.driver",
 				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");
 	  driver = new ChromeDriver();
-	
+	*/
   }
 
   @AfterClass
   public void afterClass() {
-	  driver.close();
+	 /* driver.close();*/
   }
 
   @BeforeTest
