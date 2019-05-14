@@ -3,17 +3,15 @@ package com.test.api.TestNGClass;
 import org.testng.annotations.Test;
 import org.testng.collections.Lists;
 
-import ru.yandex.qatools.allure.annotations.Description;
-import ru.yandex.qatools.allure.annotations.Step;
+import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.BeforeClass;
-
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -29,14 +27,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 public class IdAuth extends BaseTest {
-  @Test(dataProvider="dp")
+ // @Test(dataProvider="dp")
   public void w(Integer n, String s) throws Exception {
 	  System.out.println("n is "+n);
 	  System.out.println("s is "+s);
 	  Assert.assertEquals(Integer.valueOf(2), n);
   }
   @Test(description = "°Ù¶ÈËÑË÷")
-  public void baiduSearchTest(){
+  public void baiduSearchTest() throws Exception {
       String url = "http://www.baidu.com";
       System.out.println("url:"+url);
       driver.get(url);

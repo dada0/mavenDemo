@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1557830452006" stop="1557830460283" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default suite : Default test</name>
+    <title>Default suite : Default test</title>
+    <test-cases>
+        <test-case start="1557830452127" stop="0" status="passed">
+            <name>baiduSearchTest</name>
+            <description>百度搜索</description>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.test.api.TestNGClass.IdAuth"/>
+                <label name="testMethod" value="baiduSearchTest"/>
+                <label name="host" value="DESKTOP-530STT9"/>
+                <label name="thread" value="11564@DESKTOP-530STT9.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1557830452127" stop="0" status="passed">
+            <name>baiduSearchTest</name>
+            <description>百度搜索</description>
+            <labels>
+                <label name="testSuite" value="Default suite"/>
+                <label name="testGroup" value="Default test"/>
+                <label name="testClass" value="com.test.api.TestNGClass.IdAuth"/>
+                <label name="testMethod" value="baiduSearchTest"/>
+                <label name="host" value="DESKTOP-530STT9"/>
+                <label name="thread" value="11564@DESKTOP-530STT9.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

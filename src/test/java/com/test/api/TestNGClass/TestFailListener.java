@@ -1,34 +1,23 @@
 package com.test.api.TestNGClass;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
-
-
-
-import ru.yandex.qatools.allure.annotations.Attachment;
-
+import io.qameta.allure.Attachment;
 public class TestFailListener extends TestListenerAdapter {
 	public void onTestFailure(ITestResult tr) {
 		super.onTestFailure(tr);
-		BaseTest bt = (BaseTest) tr.getInstance();
-		WebDriver driver = bt.getDriver();
+		//BaseTest bt = (BaseTest) tr.getInstance();
+		 //WebDriver driver = bt.getDriver();
+		 Object currentClass = tr.getInstance();  
+	     WebDriver driver = ((BaseTest) currentClass).getDriver();  
 		if(driver != null) {
 			takePhoto(driver);
 			logCaseStep(tr);
 			exceptedResult(tr);
-			
 		}
-		
-		
 	}
 	
 
