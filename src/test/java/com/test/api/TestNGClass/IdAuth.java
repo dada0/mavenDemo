@@ -50,7 +50,6 @@ public class IdAuth extends BaseTest {
 	 /* System.setProperty("webdriver.chrome.driver",
 				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");*/
 	  driver.get("http://192.168.139.196:8086/cdzx/admin/login");
-	  System.out.println("=======  打开链接   =========\n");
 	  
 		//等待元素出现  
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")));
@@ -61,16 +60,13 @@ public class IdAuth extends BaseTest {
 		driver.findElement(By.id("password")).sendKeys("Intasect_123");
 		Thread.sleep(2000);
 		//点击查询按钮
-		//driver.findElement(By.id(PageConstant.BTNKEY)).click();
 		driver.findElement(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")).click();
 		
 		//找到菜单
-		//*[@id="LAY-system-side-menu"]/li[1]/a
 		 Thread.sleep(5000);
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/a")));
 		driver.findElement(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/a")).click();
 		//打开新增叶片
-		//*[@id="LAY-system-side-menu"]/li[1]/dl/dd[1]/a
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/dl/dd[1]/a")));
 		driver.findElement(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/dl/dd[1]/a")).click();
 		Thread.sleep(5000);
@@ -83,7 +79,6 @@ public class IdAuth extends BaseTest {
 		}else {
 			ths.click();
 		}
-		//driver.findElement(By.id("")).click();
 		 Thread.sleep(10000);
 		 driver.switchTo().defaultContent();
 		 String parentWindowHandler = driver.getWindowHandle();
