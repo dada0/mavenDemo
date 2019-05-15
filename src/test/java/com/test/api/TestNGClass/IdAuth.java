@@ -45,7 +45,7 @@ public class IdAuth extends BaseTest {
   @Test(description = "测试新增人员")
   @Step("打开cdzx登陆页面实行免登操作")
   @Description("测试allure report")
-  public void f() throws InterruptedException {
+  public void f() throws Exception  {
 	  //打开链接
 	 /* System.setProperty("webdriver.chrome.driver",
 				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");*/

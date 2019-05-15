@@ -65,6 +65,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>./src/main/java/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <includes>**/**.java</includes>
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
                     </argLine>
@@ -73,6 +74,10 @@
                         <property>
                             <name>allure.results.directory</name>
                             <value>./target/${timestamp}/allure-results</value>
+                        </property>
+                        <property>
+                           <name>allure.link.issue.pattern</name>
+                           <value>https://example.org/issue/{}</value>
                         </property>
                     </systemProperties>
                 </configuration>
@@ -113,8 +118,8 @@
                     <resultsDirectory>./${timestamp}/allure-results</resultsDirectory>
                     <!--@Issue以及@TestCaseId中的链接配置，%s为id占位符-->
                     <properties>
-                        <allure.issues.tracker.pattern>http://122.225.68.74:8082/browse/%s</allure.issues.tracker.pattern>
-                        <allure.tests.management.pattern>http://122.225.68.74:8082/browse/%s</allure.tests.management.pattern>
+                        <allure.issues.tracker.pattern>http://192.168.139.196:8086/browse/%s</allure.issues.tracker.pattern>
+                        <allure.tests.management.pattern>http://192.168.139.196:8086/browse/%s</allure.tests.management.pattern>
                     </properties>
 
                 </configuration>
