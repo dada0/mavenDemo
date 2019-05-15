@@ -32,8 +32,7 @@ public class PostText {
     
   @Test
   public void f() throws ClientProtocolException, IOException {
-      
-        String loginUrl = "http://xxx/xxx/login?loginName=admin&passWord=123456";
+        String loginUrl = "http://192.168.139.196:8086/login?loginName=admin&passWord=123456";
         JSONObject json = HttpUtils.visitUrlPost(loginUrl);
 //        boolean success = json.getBoolean("success");
         Boolean success = null;
@@ -43,7 +42,7 @@ public class PostText {
             success = false;
         }
 //        boolean success = json.getBoolean("message");
-        String enterTrainningUrl = "http://xxx.xxx?appName=&createTimeEnd=&createTimeStart=&creatorName=&page=1&size=5";
+        String enterTrainningUrl = "http://192.168.139.196:8086?appName=&createTimeEnd=&createTimeStart=&creatorName=&page=1&size=5";
         System.out.println(enterTrainningUrl);
         JSONObject enterObj = HttpUtils.visitUrlGet(enterTrainningUrl);
         System.out.println(enterObj.toString());

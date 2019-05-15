@@ -9,11 +9,16 @@ import io.qameta.allure.Attachment;
 public class TestFailListener extends TestListenerAdapter {
 	public void onTestFailure(ITestResult tr) {
 		super.onTestFailure(tr);
-		//BaseTest bt = (BaseTest) tr.getInstance();
-		 //WebDriver driver = bt.getDriver();
+		BaseTest bt = (BaseTest) tr.getInstance();
+		System.out.println(tr);
+		WebDriver driver = bt.getDriver();
+		 /*System.out.println(tr);
 		 Object currentClass = tr.getInstance();  
-	     WebDriver driver = ((BaseTest) currentClass).getDriver();  
+		 System.out.println(currentClass);
+	     WebDriver driver = ((BaseTest) currentClass).getDriver(); */
+	     System.out.println(driver);
 		if(driver != null) {
+			System.out.println( " ************  " + driver);
 			takePhoto(driver);
 			logCaseStep(tr);
 			exceptedResult(tr);

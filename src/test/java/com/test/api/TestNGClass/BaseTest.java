@@ -1,10 +1,9 @@
 package com.test.api.TestNGClass;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.Listeners;
+import org.testng.annotations.*;
 
 @Listeners({TestFailListener.class})
 public class BaseTest {
@@ -12,6 +11,7 @@ public class BaseTest {
 	public WebDriver driver;
 
     public WebDriver getDriver(){
+    	
         return driver;
     }
 

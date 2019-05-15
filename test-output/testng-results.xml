@@ -2,32 +2,70 @@
 <testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="13062" started-at="2019-05-14T11:01:57Z" finished-at="2019-05-14T11:02:10Z">
+  <suite name="Default suite" duration-ms="312187" started-at="2019-05-15T00:55:33Z" finished-at="2019-05-15T01:00:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="13062" started-at="2019-05-14T11:01:57Z" finished-at="2019-05-14T11:02:10Z">
+    <test name="Default test" duration-ms="312187" started-at="2019-05-15T00:55:33Z" finished-at="2019-05-15T01:00:45Z">
       <class name="com.test.api.TestNGClass.IdAuth">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="beforeSuite" is-config="true" duration-ms="34" started-at="2019-05-14T19:01:57Z" finished-at="2019-05-14T19:01:57Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="beforeSuite" is-config="true" duration-ms="37" started-at="2019-05-15T08:55:33Z" finished-at="2019-05-15T08:55:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="beforeTest" is-config="true" duration-ms="0" started-at="2019-05-14T19:01:57Z" finished-at="2019-05-14T19:01:57Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="beforeTest" is-config="true" duration-ms="1" started-at="2019-05-15T08:55:33Z" finished-at="2019-05-15T08:55:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="beforeClass" is-config="true" duration-ms="1" started-at="2019-05-14T19:01:57Z" finished-at="2019-05-14T19:01:57Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="setUp" is-config="true" duration-ms="4714" started-at="2019-05-15T08:55:33Z" finished-at="2019-05-15T08:55:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="beforeClass" is-config="true" duration-ms="1" started-at="2019-05-15T08:55:38Z" finished-at="2019-05-15T08:55:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="beforeMethod" is-config="true" duration-ms="168" started-at="2019-05-14T19:01:57Z" finished-at="2019-05-14T19:01:57Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="beforeMethod" is-config="true" duration-ms="122" started-at="2019-05-15T08:55:38Z" finished-at="2019-05-15T08:55:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="baiduSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="baiduSearchTest" duration-ms="8410" started-at="2019-05-14T19:01:57Z" description="百度搜索" finished-at="2019-05-14T19:02:06Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="baiduSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="baiduSearchTest" duration-ms="2326" started-at="2019-05-15T08:55:38Z" description="百度搜索" finished-at="2019-05-15T08:55:40Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"s11"}
+  (Session info: chrome=72.0.3626.121)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 18 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:50157}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir20100_32609}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0941f8fa637cfc85e6c32df7efd15377
+*** Element info: {Using=id, value=s11}]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.test.api.TestNGClass.IdAuth.baiduSearchTest(IdAuth.java:40)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"s11"}
+  (Session info: chrome=72.0.3626.121)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 18 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:50157}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir20100_32609}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0941f8fa637cfc85e6c32df7efd15377
+*** Element info: {Using=id, value=s11}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.test.api.TestNGClass.IdAuth.baiduSearchTest(IdAuth.java:36)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,27 +92,54 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- baiduSearchTest -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="afterMethod" is-config="true" duration-ms="29" started-at="2019-05-14T19:02:06Z" finished-at="2019-05-14T19:02:06Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="afterMethod" is-config="true" duration-ms="7" started-at="2019-05-15T08:55:41Z" finished-at="2019-05-15T08:55:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="beforeMethod" is-config="true" duration-ms="23" started-at="2019-05-14T19:02:08Z" finished-at="2019-05-14T19:02:08Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2019-05-15T08:55:41Z" finished-at="2019-05-15T08:55:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="f()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="f" duration-ms="930" started-at="2019-05-14T19:02:08Z" description="测试新增人员" finished-at="2019-05-14T19:02:08Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="f()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="f" duration-ms="300052" started-at="2019-05-15T08:55:41Z" description="测试新增人员" finished-at="2019-05-15T09:00:41Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[timeout
+  (Session info: chrome=72.0.3626.121)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 300.01 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:50157}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir20100_32609}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0941f8fa637cfc85e6c32df7efd15377]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.test.api.TestNGClass.IdAuth.f_aroundBody0(IdAuth.java:58)
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout
+  (Session info: chrome=72.0.3626.121)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 300.01 seconds
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:50157}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir20100_32609}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0941f8fa637cfc85e6c32df7efd15377
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:316)
+	at com.test.api.TestNGClass.IdAuth.f_aroundBody0(IdAuth.java:52)
 	at com.test.api.TestNGClass.IdAuth$AjcClosure1.run(IdAuth.java:1)
 	at org.aspectj.runtime.reflect.JoinPointImpl.proceed(JoinPointImpl.java:149)
 	at io.qameta.allure.aspects.StepsAspects.step(StepsAspects.java:46)
-	at com.test.api.TestNGClass.IdAuth.f(IdAuth.java:58)
+	at com.test.api.TestNGClass.IdAuth.f(IdAuth.java:52)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -101,23 +166,57 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="afterMethod" is-config="true" duration-ms="19" started-at="2019-05-14T19:02:09Z" finished-at="2019-05-14T19:02:09Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="afterMethod" is-config="true" duration-ms="6" started-at="2019-05-15T09:00:42Z" finished-at="2019-05-15T09:00:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="beforeMethod" is-config="true" duration-ms="19" started-at="2019-05-14T19:02:09Z" finished-at="2019-05-14T19:02:09Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2019-05-15T09:00:42Z" finished-at="2019-05-15T09:00:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="sougouSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="sougouSearchTest" duration-ms="50" started-at="2019-05-14T19:02:09Z" description="搜狗搜索" finished-at="2019-05-14T19:02:09Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="FAIL" signature="sougouSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="sougouSearchTest" duration-ms="1415" started-at="2019-05-15T09:00:42Z" description="搜狗搜索" finished-at="2019-05-15T09:00:43Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"query1"}
+  (Session info: chrome=72.0.3626.121)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 36 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:50157}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir20100_32609}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0941f8fa637cfc85e6c32df7efd15377
+*** Element info: {Using=id, value=query1}]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-	at com.test.api.TestNGClass.IdAuth.sougouSearchTest(IdAuth.java:47)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"query1"}
+  (Session info: chrome=72.0.3626.121)
+  (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 36 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
+System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:50157}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir20100_32609}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 0941f8fa637cfc85e6c32df7efd15377
+*** Element info: {Using=id, value=query1}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.test.api.TestNGClass.IdAuth.sougouSearchTest(IdAuth.java:42)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -144,23 +243,27 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sougouSearchTest -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="afterMethod" is-config="true" duration-ms="22" started-at="2019-05-14T19:02:09Z" finished-at="2019-05-14T19:02:09Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="afterMethod" is-config="true" duration-ms="6" started-at="2019-05-15T09:00:44Z" finished-at="2019-05-15T09:00:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="afterClass" is-config="true" duration-ms="7" started-at="2019-05-14T19:02:09Z" finished-at="2019-05-14T19:02:09Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="afterClass" is-config="true" duration-ms="1" started-at="2019-05-15T09:00:44Z" finished-at="2019-05-15T09:00:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="afterTest" is-config="true" duration-ms="1" started-at="2019-05-14T19:02:10Z" finished-at="2019-05-14T19:02:10Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="tearDown" is-config="true" duration-ms="1812" started-at="2019-05-15T09:00:44Z" finished-at="2019-05-15T09:00:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="afterTest" is-config="true" duration-ms="1" started-at="2019-05-15T09:00:45Z" finished-at="2019-05-15T09:00:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@24361cfc]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-05-14T19:02:10Z" finished-at="2019-05-14T19:02:10Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@4a05d8ae]" name="afterSuite" is-config="true" duration-ms="0" started-at="2019-05-15T09:00:45Z" finished-at="2019-05-15T09:00:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
