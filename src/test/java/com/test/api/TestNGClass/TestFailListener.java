@@ -21,6 +21,7 @@ public class TestFailListener extends TestListenerAdapter {
 		WebDriver driver = bt.getDriver();
 		try {
 			takePhoto(tr.getClass().toString(),tr.getMethod().toString(),driver);
+			operationTakePhoto(driver);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -35,7 +36,7 @@ public class TestFailListener extends TestListenerAdapter {
 		byte[] screenshotAs = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		return screenshotAs;
 	}
-
+	@Attachment(value = "²Ù×÷Ê§°Ü½ØÍ¼ÈçÏÂ£º",type = "image/png")
 	 public void takePhoto(String classname, String methodname,WebDriver driver) throws Exception {
 	        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
 	        Date currentTime = new Date();
