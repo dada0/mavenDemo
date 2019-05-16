@@ -9,8 +9,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -50,6 +52,8 @@ public class IdAuth extends BaseTest {
 	 /* System.setProperty("webdriver.chrome.driver",
 				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");*/
 	  driver.get("http://192.168.139.196:8086/cdzx/admin/login");
+	  System.out.println("第一个 "  + driver.manage().window());
+	  System.out.println("第一个 "  + driver.getWindowHandle());
 	  
 		//等待元素出现  
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")));
@@ -72,7 +76,8 @@ public class IdAuth extends BaseTest {
 		Thread.sleep(5000);
 		
 		driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"LAY_app_body\"]/div[2]/iframe")));
-		
+		System.out.println("第二个 "  + driver.manage());
+		  System.out.println("第二个 "  + driver.getWindowHandle());
 		WebElement ths= driver.findElement(By.id("adduser"));
 		if(ths == null) {
 			driver.close();     
@@ -81,9 +86,6 @@ public class IdAuth extends BaseTest {
 		}
 		 Thread.sleep(10000);
 		 driver.switchTo().defaultContent();
-		 String parentWindowHandler = driver.getWindowHandle();
-		 String subWindowHandler = null;
-		 //driver.switchTo().frame(0);
 		 System.out.println(driver.getWindowHandles());
 		 
 		 WebElement ele = driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]"));
@@ -117,8 +119,6 @@ public class IdAuth extends BaseTest {
 		//用户类型 
 		WebElement usertype=driver.findElement(By.xpath("//select[@id=\"user.USERTYPE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
 		((JavascriptExecutor)driver).executeScript("arguments[0].click();", usertype);
-		//driver.findElement(By.id("user.ENABLE")).sendKeys("正常");//状态
-		//driver.findElement(By.id("user.USERTYPE")).sendKeys("管理员");//用户类型
 		driver.findElement(By.id("user.REALNAME")).sendKeys("十亿");
 		//driver.findElement(By.id("user.BIRTHDAY")).sendKeys("0816");
 		WebElement gender=driver.findElement(By.xpath("//select[@id=\"user.GENDER\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
@@ -127,18 +127,44 @@ public class IdAuth extends BaseTest {
 		driver.findElement(By.id("user.IDENTIFY")).sendKeys("513030199908440222");
 		driver.switchTo().defaultContent();
 		//点击保存
-		driver.findElement(By.xpath("//*[@id=\"layui-layer1\"]/div[3]/a[1]")).click();
+		driver.findElement(By.cssSelector("div.layui-layer layui-layer-iframe > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn0")).click();
+		System.out.println( " &&&&&&&&" +driver.getWindowHandles());
 		Thread.sleep(5000);
 		//判断是否保存成功
-		
+		//尝试去找弹出框
+		/*WebElement eleAlter = driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]"));
+		 driver.switchTo().frame(eleAlter);*/
+		//获取Alert弹框对象；
+		Alert promptWindow = null;
+		try {
+			driver.findElement(By.id("layui-layer3"));
+			
+			String st=  driver.findElement(By.cssSelector("#layui-layer3 > div.layui-layer-content.layui-layer-padding")).getText();
+			System.out.println(st);
+			//截图
+			TestFailListener.operationTakePhoto(driver);
+			driver.switchTo().defaultContent();
+			System.out.println( " &&&&&&&&" +driver.getWindowHandles());
+			//driver.findElement(By.xpath("//*[@id=\"layui-layer6\"]/div[3]/a")).click();
+			driver.findElement(By.cssSelector("div.layui-layer-dialog > div.layui-layer-btn.layui-layer-btn- > a")).click();;
+			driver.switchTo().defaultContent();
+			//点击取消  #layui-layer1 > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn1
+			driver.findElement(By.cssSelector("div.layui-layer layui-layer-iframe > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn1")).click();
+			
+			
+			
+		} catch (NoAlertPresentException e) {
+			System.out.println("尝试操作的prompt弹出框未找到！");
+			e.printStackTrace();
+		}
 		
   }
  
   @BeforeMethod
-  public void beforeMethod() {
+  public void beforeMethod() { 
 	  
   }
-
+     
   @AfterMethod
   public void afterMethod() {
   }

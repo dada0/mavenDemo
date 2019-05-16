@@ -2,7 +2,9 @@ package com.test.api.TestNGClass;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.tools.ant.types.resources.selectors.Date;
 import org.openqa.selenium.OutputType;
@@ -17,22 +19,27 @@ public class TestFailListener extends TestListenerAdapter {
 		BaseTest bt = (BaseTest) tr.getInstance();
 		System.out.println(tr);
 		WebDriver driver = bt.getDriver();
-		takePhoto(tr.getClass().toString(),tr.getMethod().toString(),driver);
+		try {
+			takePhoto(tr.getClass().toString(),tr.getMethod().toString(),driver);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		logCaseStep(tr);
 		exceptedResult(tr);
 	}
 	
 
-	/*@Attachment(value = "Ê§°Ü½ØÍ¼ÈçÏÂ£º",type = "image/png")
-	public byte[]  takePhoto(WebDriver driver){
+	@Attachment(value = "²Ù×÷Ê§°Ü½ØÍ¼ÈçÏÂ£º",type = "image/png")
+	public static byte[]  operationTakePhoto(WebDriver driver){
 		byte[] screenshotAs = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		return screenshotAs;
-	}*/
+	}
 
-	 public void takePhoto(String classname, String methodname,WebDriver driver) {
+	 public void takePhoto(String classname, String methodname,WebDriver driver) throws Exception {
 	        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
 	        Date currentTime = new Date();
-	        String dateString = formatter.format(currentTime);
+	        String dateString = formatter.parse(currentTime.toString()).toString();
 	        String screenName = classname+"_"+methodname+"_"+dateString+ ".png";
 	        System.out.println(screenName);
 	        File dir = new File("test-output/snapshot");

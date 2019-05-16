@@ -1,0 +1,1 @@
+{"uuid":"605b39c2-226a-4c32-9e5c-1ee4b19c82c9","name":"com.test.api.TestNGClass.IdAuth.afterMethod","description":"","start":1557990625015,"stop":1557990625015,"children":["f9861883-a857-44f1-bf2e-ef78928b4c05"],"afters":[{"name":"afterMethod","status":"passed","stage":"finished","description":"","start":1557990625015,"stop":1557990625015}]}
