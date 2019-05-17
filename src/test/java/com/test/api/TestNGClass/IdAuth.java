@@ -44,7 +44,7 @@ public class IdAuth extends BaseTest {
       driver.findElement(By.id("query1")).sendKeys("galen2016");
   }
   
-  @Test(description = "测试新增人员")
+  //@Test(description = "测试新增人员")
   @Step("打开cdzx登陆页面实行免登操作")
   @Description("测试allure report")
   public void f() throws Exception  {

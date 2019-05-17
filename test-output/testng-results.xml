@@ -2,57 +2,57 @@
 <testng-results skipped="0" failed="3" total="3" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="45100" started-at="2019-05-16T08:13:26Z" finished-at="2019-05-16T08:14:11Z">
+  <suite name="Default suite" duration-ms="96770" started-at="2019-05-17T02:01:13Z" finished-at="2019-05-17T02:02:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="45100" started-at="2019-05-16T08:13:26Z" finished-at="2019-05-16T08:14:11Z">
+    <test name="Default test" duration-ms="96770" started-at="2019-05-17T02:01:13Z" finished-at="2019-05-17T02:02:50Z">
       <class name="com.test.api.TestNGClass.IdAuth">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="beforeSuite" is-config="true" duration-ms="34" started-at="2019-05-16T16:13:26Z" finished-at="2019-05-16T16:13:26Z">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="beforeSuite" is-config="true" duration-ms="40" started-at="2019-05-17T10:01:13Z" finished-at="2019-05-17T10:01:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="beforeTest" is-config="true" duration-ms="0" started-at="2019-05-16T16:13:26Z" finished-at="2019-05-16T16:13:26Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="beforeTest" is-config="true" duration-ms="1" started-at="2019-05-17T10:01:13Z" finished-at="2019-05-17T10:01:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="setUp" is-config="true" duration-ms="3758" started-at="2019-05-16T16:13:26Z" finished-at="2019-05-16T16:13:29Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="setUp" is-config="true" duration-ms="11277" started-at="2019-05-17T10:01:13Z" finished-at="2019-05-17T10:01:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-05-16T16:13:29Z" finished-at="2019-05-16T16:13:29Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-05-17T10:01:24Z" finished-at="2019-05-17T10:01:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="beforeMethod" is-config="true" duration-ms="111" started-at="2019-05-16T16:13:29Z" finished-at="2019-05-16T16:13:30Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="beforeMethod" is-config="true" duration-ms="106" started-at="2019-05-17T10:01:24Z" finished-at="2019-05-17T10:01:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="baiduSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="baiduSearchTest" duration-ms="2132" started-at="2019-05-16T16:13:30Z" description="百度搜索" finished-at="2019-05-16T16:13:32Z">
+        <test-method status="FAIL" signature="baiduSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="baiduSearchTest" duration-ms="2168" started-at="2019-05-17T10:01:24Z" description="百度搜索" finished-at="2019-05-17T10:01:26Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"s11"}
   (Session info: chrome=72.0.3626.121)
   (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 27 milliseconds
+Command duration or timeout: 28 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53000}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir7664_10228}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6810586c13392faa1dac8978f0640a49
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64024}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir41192_21830}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a879a9a5ce56b699ff3eecc86dd88351
 *** Element info: {Using=id, value=s11}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"s11"}
   (Session info: chrome=72.0.3626.121)
   (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 27 milliseconds
+Command duration or timeout: 28 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53000}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir7664_10228}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6810586c13392faa1dac8978f0640a49
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64024}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir41192_21830}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a879a9a5ce56b699ff3eecc86dd88351
 *** Element info: {Using=id, value=s11}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -96,15 +96,15 @@ Session ID: 6810586c13392faa1dac8978f0640a49
           <reporter-output>
           </reporter-output>
         </test-method> <!-- baiduSearchTest -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="afterMethod" is-config="true" duration-ms="7" started-at="2019-05-16T16:13:32Z" finished-at="2019-05-16T16:13:32Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="afterMethod" is-config="true" duration-ms="6" started-at="2019-05-17T10:02:12Z" finished-at="2019-05-17T10:02:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2019-05-16T16:13:32Z" finished-at="2019-05-16T16:13:32Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="beforeMethod" is-config="true" duration-ms="6" started-at="2019-05-17T10:02:12Z" finished-at="2019-05-17T10:02:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="f()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="f" duration-ms="32033" started-at="2019-05-16T16:13:32Z" description="测试新增人员" finished-at="2019-05-16T16:14:04Z">
+        <test-method status="FAIL" signature="f()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="f" duration-ms="30289" started-at="2019-05-17T10:02:12Z" description="测试新增人员" finished-at="2019-05-17T10:02:42Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"div.layui-layer layui-layer-iframe > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn0"}
@@ -115,8 +115,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53000}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir7664_10228}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6810586c13392faa1dac8978f0640a49
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64024}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir41192_21830}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a879a9a5ce56b699ff3eecc86dd88351
 *** Element info: {Using=css selector, value=div.layui-layer layui-layer-iframe > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn0}]]>
             </message>
             <full-stacktrace>
@@ -128,8 +128,8 @@ For documentation on this error, please visit: http://seleniumhq.org/exceptions/
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53000}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir7664_10228}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6810586c13392faa1dac8978f0640a49
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64024}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir41192_21830}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a879a9a5ce56b699ff3eecc86dd88351
 *** Element info: {Using=css selector, value=div.layui-layer layui-layer-iframe > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn0}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -177,40 +177,40 @@ Session ID: 6810586c13392faa1dac8978f0640a49
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="afterMethod" is-config="true" duration-ms="5" started-at="2019-05-16T16:14:04Z" finished-at="2019-05-16T16:14:04Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="afterMethod" is-config="true" duration-ms="6" started-at="2019-05-17T10:02:43Z" finished-at="2019-05-17T10:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2019-05-16T16:14:04Z" finished-at="2019-05-16T16:14:04Z">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2019-05-17T10:02:43Z" finished-at="2019-05-17T10:02:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="FAIL" signature="sougouSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="sougouSearchTest" duration-ms="5402" started-at="2019-05-16T16:14:04Z" description="搜狗搜索" finished-at="2019-05-16T16:14:09Z">
+        <test-method status="FAIL" signature="sougouSearchTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="sougouSearchTest" duration-ms="1609" started-at="2019-05-17T10:02:43Z" description="搜狗搜索" finished-at="2019-05-17T10:02:44Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"id","selector":"query1"}
   (Session info: chrome=72.0.3626.121)
   (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 24 milliseconds
+Command duration or timeout: 34 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53000}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir7664_10228}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6810586c13392faa1dac8978f0640a49
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64024}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir41192_21830}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a879a9a5ce56b699ff3eecc86dd88351
 *** Element info: {Using=id, value=query1}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"query1"}
   (Session info: chrome=72.0.3626.121)
   (Driver info: chromedriver=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 24 milliseconds
+Command duration or timeout: 34 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'DESKTOP-530STT9', ip: '10.0.75.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_60'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:53000}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir7664_10228}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 6810586c13392faa1dac8978f0640a49
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:64024}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=73.0.3683.68 (47787ec04b6e38e22703e856e101e840b65afe72), userDataDir=C:\Users\intasect\AppData\Local\Temp\scoped_dir41192_21830}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=72.0.3626.121, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a879a9a5ce56b699ff3eecc86dd88351
 *** Element info: {Using=id, value=query1}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -254,23 +254,23 @@ Session ID: 6810586c13392faa1dac8978f0640a49
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sougouSearchTest -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="afterMethod" is-config="true" duration-ms="6" started-at="2019-05-16T16:14:09Z" finished-at="2019-05-16T16:14:09Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="afterMethod" is-config="true" duration-ms="6" started-at="2019-05-17T10:02:45Z" finished-at="2019-05-17T10:02:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="tearDown" is-config="true" duration-ms="1429" started-at="2019-05-16T16:14:09Z" finished-at="2019-05-16T16:14:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="afterClass" is-config="true" duration-ms="0" started-at="2019-05-16T16:14:09Z" finished-at="2019-05-16T16:14:09Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="afterClass" is-config="true" duration-ms="1" started-at="2019-05-17T10:02:45Z" finished-at="2019-05-17T10:02:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="afterTest" is-config="true" duration-ms="0" started-at="2019-05-16T16:14:11Z" finished-at="2019-05-16T16:14:11Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="tearDown" is-config="true" duration-ms="4746" started-at="2019-05-17T10:02:45Z" finished-at="2019-05-17T10:02:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="afterTest" is-config="true" duration-ms="1" started-at="2019-05-17T10:02:50Z" finished-at="2019-05-17T10:02:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@9a6fbc0]" name="afterSuite" is-config="true" duration-ms="1" started-at="2019-05-16T16:14:11Z" finished-at="2019-05-16T16:14:11Z">
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.test.api.TestNGClass.IdAuth@243f003c]" name="afterSuite" is-config="true" duration-ms="1" started-at="2019-05-17T10:02:50Z" finished-at="2019-05-17T10:02:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
