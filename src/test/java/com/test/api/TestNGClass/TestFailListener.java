@@ -17,22 +17,21 @@ public class TestFailListener extends TestListenerAdapter {
 	public void onTestFailure(ITestResult tr) {
 		super.onTestFailure(tr);
 		BaseTest bt = (BaseTest) tr.getInstance();
-		System.out.println(tr);
 		WebDriver driver = bt.getDriver();
-		try {
-			takePhoto(tr.getClass().toString(),tr.getMethod().toString(),driver);
+		/*try {
+			takePhoto(tr.getClass().toString(),tr.getMethod().toString(),driver);*/
 			operationTakePhoto(driver);
-		} catch (Exception e) {
+		/*} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		logCaseStep(tr);
 		exceptedResult(tr);
 	}
 	
 
 	@Attachment(value = "²Ù×÷Ê§°Ü½ØÍ¼ÈçÏÂ£º",type = "image/png")
-	public static byte[]  operationTakePhoto(WebDriver driver){
+	public  byte[]  operationTakePhoto(WebDriver driver){
 		byte[] screenshotAs = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		return screenshotAs;
 	}
