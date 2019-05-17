@@ -129,7 +129,7 @@ public class IdAuth extends BaseTest {
 		//µã»÷±£´æ
 		driver.findElement(By.cssSelector("div.layui-layer layui-layer-iframe > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn0")).click();
 		System.out.println( " &&&&&&&&" +driver.getWindowHandles());
-		Thread.sleep(5000);
+		
 		//ÅÐ¶ÏÊÇ·ñ±£´æ³É¹¦
 		//³¢ÊÔÈ¥ÕÒµ¯³ö¿ò
 		/*WebElement eleAlter = driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]"));
@@ -142,8 +142,9 @@ public class IdAuth extends BaseTest {
 			String st=  driver.findElement(By.cssSelector("#layui-layer3 > div.layui-layer-content.layui-layer-padding")).getText();
 			System.out.println(st);
 			//½ØÍ¼
-		    TestFailListener.operationTakePhoto(driver);
+		  /*  TestFailListener.operationTakePhoto(driver);
 		    TestFailListener.logInfoStep(st);
+		    Thread.sleep(5000);*/
 			driver.switchTo().defaultContent();
 			System.out.println( " &&&&&&&&" +driver.getWindowHandles());
 			//driver.findElement(By.xpath("//*[@id=\"layui-layer6\"]/div[3]/a")).click();
