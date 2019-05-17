@@ -142,7 +142,8 @@ public class IdAuth extends BaseTest {
 			String st=  driver.findElement(By.cssSelector("#layui-layer3 > div.layui-layer-content.layui-layer-padding")).getText();
 			System.out.println(st);
 			//НиЭМ
-			//TestFailListener.operationTakePhoto(driver);
+		    TestFailListener.operationTakePhoto(driver);
+		    TestFailListener.logInfoStep("st");
 			driver.switchTo().defaultContent();
 			System.out.println( " &&&&&&&&" +driver.getWindowHandles());
 			//driver.findElement(By.xpath("//*[@id=\"layui-layer6\"]/div[3]/a")).click();

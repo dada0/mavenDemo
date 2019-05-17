@@ -76,6 +76,15 @@ public class TestFailListener extends TestListenerAdapter {
 		 step= step + " \n 3、" + tr.getMethod().toString();
 		return step;
 	}
+	/**
+	 * 打印测试步骤
+	 * @param tr
+	 */
+	@Attachment(value = "操作结果如下：")
+	public static String logInfoStep(String tr){
+		
+		return tr;
+	}
 
 	/**
 	 * 打印测试步骤
