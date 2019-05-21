@@ -12,31 +12,31 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class test_01 {
 	 
 	public static void main(String[] args) throws InterruptedException {
-		//´ò¿ªÁ´½Ó
+		//æ‰“å¼€é“¾æ¥
 		  System.setProperty("webdriver.chrome.driver",
 					"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");
 		  WebDriver  driver = new ChromeDriver();
 		  driver.get("http://192.168.139.196:8086/cdzx/admin/login");
-		  System.out.println("=======  ´ò¿ªÁ´½Ó   =========\n");
+		  System.out.println("=======  æ‰“å¼€é“¾æ¥   =========\n");
 		  
-			//µÈ´ıÔªËØ³öÏÖ  
+			//ç­‰å¾…å…ƒç´ å‡ºç°  
 			(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")));
 		    Thread.sleep(5000);
-		    //ÊäÈë²éÑ¯¹Ø¼ü×Ö
+		    //è¾“å…¥æŸ¥è¯¢å…³é”®å­—
 		    
 			driver.findElement(By.id("username")).sendKeys("admin");
 			driver.findElement(By.id("password")).sendKeys("Intasect_123");
 			Thread.sleep(2000);
-			//µã»÷²éÑ¯°´Å¥
+			//ç‚¹å‡»æŸ¥è¯¢æŒ‰é’®
 			//driver.findElement(By.id(PageConstant.BTNKEY)).click();
 			driver.findElement(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")).click();
 			
-			//ÕÒµ½²Ëµ¥
+			//æ‰¾åˆ°èœå•
 			//*[@id="LAY-system-side-menu"]/li[1]/a
 			 Thread.sleep(5000);
 			(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/a")));
 			driver.findElement(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/a")).click();
-			//´ò¿ªĞÂÔöÒ¶Æ¬
+			//æ‰“å¼€æ–°å¢å¶ç‰‡
 			//*[@id="LAY-system-side-menu"]/li[1]/dl/dd[1]/a
 			(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/dl/dd[1]/a")));
 			driver.findElement(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/dl/dd[1]/a")).click();
@@ -71,34 +71,34 @@ public class test_01 {
 			 }*/
 			 
 			 /*(new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"layui-layer1\"]")));*/
-			//±£´æ°´Å¥
+			//ä¿å­˜æŒ‰é’®
 			//*[@id="layui-layer1"]/div[3]/a[1]
 			/*(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"layui-layer1\"]/div[3]/a[1]")));
 			driver.findElement(By.xpath("//*[@id=\"layui-layer1\"]/div[3]/a[1]")).click();
 			*/
-			//¸³Öµ
+			//èµ‹å€¼
 			 
 			driver.findElement(By.id("user.USERNAME")).sendKeys("zhangsan1");
 			driver.findElement(By.id("user.EMAIL")).sendKeys("471255559@qq.com");
 			driver.findElement(By.id("user.MOBILE")).sendKeys("18482176779");
 			driver.findElement(By.id("user.PASSWORD")).sendKeys("admin");
-			//×´Ì¬
+			//çŠ¶æ€
 			WebElement adrOption=driver.findElement(By.xpath("//select[@id=\"user.ENABLE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", adrOption);
 			
-			//ÓÃ»§ÀàĞÍ 
+			//ç”¨æˆ·ç±»å‹ 
 			WebElement usertype=driver.findElement(By.xpath("//select[@id=\"user.USERTYPE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", usertype);
-			//driver.findElement(By.id("user.ENABLE")).sendKeys("Õı³£");//×´Ì¬
-			//driver.findElement(By.id("user.USERTYPE")).sendKeys("¹ÜÀíÔ±");//ÓÃ»§ÀàĞÍ
-			driver.findElement(By.id("user.REALNAME")).sendKeys("Ê®ÒÚ");
+			//driver.findElement(By.id("user.ENABLE")).sendKeys("æ­£å¸¸");//çŠ¶æ€
+			//driver.findElement(By.id("user.USERTYPE")).sendKeys("ç®¡ç†å‘˜");//ç”¨æˆ·ç±»å‹
+			driver.findElement(By.id("user.REALNAME")).sendKeys("åäº¿");
 			//driver.findElement(By.id("user.BIRTHDAY")).sendKeys("0816");
 			WebElement gender=driver.findElement(By.xpath("//select[@id=\"user.GENDER\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", gender); 
 			
 			driver.findElement(By.id("user.IDENTIFY")).sendKeys("513030199908440222");
 			driver.switchTo().defaultContent();
-			//µã»÷±£´æ
+			//ç‚¹å‡»ä¿å­˜
 			driver.findElement(By.xpath("//*[@id=\"layui-layer1\"]/div[3]/a[1]")).click();
 			
 			Thread.sleep(5000);

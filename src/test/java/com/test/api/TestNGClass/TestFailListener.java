@@ -31,12 +31,12 @@ public class TestFailListener extends TestListenerAdapter {
 	}
 	
 
-	@Attachment(value = "²Ù×÷Ê§°Ü½ØÍ¼ÈçÏÂ£º",type = "image/png")
+	@Attachment(value = "æ“ä½œå¤±è´¥æˆªå›¾å¦‚ä¸‹ï¼š",type = "image/png")
 	public static byte[]  operationTakePhoto(WebDriver driver){
 		byte[] screenshotAs = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
 		return screenshotAs;
 	}
-	@Attachment(value = "²Ù×÷Ê§°Ü½ØÍ¼ÈçÏÂ£º",type = "image/png")
+	@Attachment(value = "æ“ä½œå¤±è´¥æˆªå›¾å¦‚ä¸‹ï¼š",type = "image/png")
 	 public void takePhoto(String classname, String methodname,WebDriver driver) throws Exception {
 	        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
 	        Date currentTime = new Date();
@@ -66,33 +66,33 @@ public class TestFailListener extends TestListenerAdapter {
 
 	
 	/**
-	 * ´òÓ¡²âÊÔ²½Öè
+	 * æ‰“å°æµ‹è¯•æ­¥éª¤
 	 * @param tr
 	 */
-	@Attachment(value = "²Ù×÷²½ÖèÈçÏÂ£º")
+	@Attachment(value = "æ“ä½œæ­¥éª¤å¦‚ä¸‹ï¼š")
 	public String logCaseStep(ITestResult tr){
-		String step =  " 1¡¢" +  tr.getInstance().toString();
-		 step= step + " \n 2¡¢" + tr.getTestClass().toString();
-		 step= step + " \n 3¡¢" + tr.getMethod().toString();
+		String step =  " 1ã€" +  tr.getInstance().toString();
+		 step= step + " \n 2ã€" + tr.getTestClass().toString();
+		 step= step + " \n 3ã€" + tr.getMethod().toString();
 		return step;
 	}
 	/**
-	 * ´òÓ¡²âÊÔ²½Öè
+	 * æ‰“å°æµ‹è¯•æ­¥éª¤
 	 * @param tr
 	 */
-	@Attachment(value = "²Ù×÷½á¹ûÈçÏÂ£º")
+	@Attachment(value = "æ“ä½œç»“æœå¦‚ä¸‹ï¼š")
 	public static String logInfoStep(String tr){
 		
 		return tr;
 	}
 
 	/**
-	 * ´òÓ¡²âÊÔ²½Öè
+	 * æ‰“å°æµ‹è¯•æ­¥éª¤
 	 * @param tr
 	 */
-	@Attachment(value = "ÆÚÍû½á¹ûÈçÏÂ£º")
+	@Attachment(value = "æœŸæœ›ç»“æœå¦‚ä¸‹ï¼š")
 	public String exceptedResult(ITestResult tr){
-		String result = "ÏÔÊ¾²éÑ¯½á¹û";
+		String result = "æ˜¾ç¤ºæŸ¥è¯¢ç»“æœ";
 		return result;
 	}
 
