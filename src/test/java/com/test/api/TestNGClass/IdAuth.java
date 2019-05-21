@@ -2,15 +2,28 @@ package com.test.api.TestNGClass;
 
 import org.testng.annotations.Test;
 
+import com.test.data.ReadExcel;
+import com.test.data.function;
+
 import io.qameta.allure.Description;
 import io.qameta.allure.Step;
+import jxl.read.biff.BiffException;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.BeforeClass;
+
+import java.awt.List;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
@@ -23,13 +36,14 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 public class IdAuth extends BaseTest {
+	Map<Integer,ArrayList<String>> map = new HashMap<Integer, ArrayList<String>>();
  // @Test(dataProvider="dp")
   public void w(Integer n, String s) throws Exception {
 	  System.out.println("n is "+n);
 	  System.out.println("s is "+s);
 	  Assert.assertEquals(Integer.valueOf(2), n);
   }
-  @Test(description = "°Ù¶ÈËÑË÷")
+  @Test(description = "ç™¾åº¦æœç´¢")
   public void baiduSearchTest() throws Exception {
       String url = "http://www.baidu.com";
       System.out.println("url:"+url);
@@ -38,128 +52,162 @@ public class IdAuth extends BaseTest {
       driver.findElement(By.id("s11")).click();
   }
 
-  @Test(description = "ËÑ¹·ËÑË÷")
+  @Test(description = "æœç‹—æœç´¢")
   public void sougouSearchTest(){
       driver.get("https://www.sogou.com");
       driver.findElement(By.id("query1")).sendKeys("galen2016");
   }
+  @Test(description ="å¯¼å…¥")
+  public void toLead () {
+	  
+	  
+  }
   
-  //@Test(description = "²âÊÔĞÂÔöÈËÔ±")
-  @Step("´ò¿ªcdzxµÇÂ½Ò³ÃæÊµĞĞÃâµÇ²Ù×÷")
-  @Description("²âÊÔallure report")
+  @Test(description = "æµ‹è¯•æ–°å¢äººå‘˜")
+  @Step("æ‰“å¼€cdzxç™»é™†é¡µé¢å®è¡Œå…ç™»æ“ä½œ")
+  @Description("æµ‹è¯•allure report")
   public void f() throws Exception  {
-	  //´ò¿ªÁ´½Ó
+		
+	  //æ‰“å¼€é“¾æ¥
 	 /* System.setProperty("webdriver.chrome.driver",
 				"C:\\Program Files (x86)\\Google\\Chrome\\Application\\72.0.3626.121\\chromedriver.exe");*/
 	  driver.get("http://192.168.139.196:8086/cdzx/admin/login");
-	  System.out.println("µÚÒ»¸ö "  + driver.manage().window());
-	  System.out.println("µÚÒ»¸ö "  + driver.getWindowHandle());
+	  System.out.println("ç¬¬ä¸€ä¸ª "  + driver.manage().window());
+	  System.out.println("ç¬¬ä¸€ä¸ª "  + driver.getWindowHandle());
 	  
-		//µÈ´ıÔªËØ³öÏÖ  
+		//ç­‰å¾…å…ƒç´ å‡ºç°  
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")));
 	    Thread.sleep(5000);
-	    //ÊäÈë²éÑ¯¹Ø¼ü×Ö
+	    //è¾“å…¥æŸ¥è¯¢å…³é”®å­—
 	    
 		driver.findElement(By.id("username")).sendKeys("admin");
 		driver.findElement(By.id("password")).sendKeys("Intasect_123");
 		Thread.sleep(2000);
-		//µã»÷²éÑ¯°´Å¥
+		//ç‚¹å‡»æŸ¥è¯¢æŒ‰é’®
 		driver.findElement(By.xpath("//*[@id=\"LAY-user-login\"]/div[1]/div[2]/div[3]/button")).click();
 		
-		//ÕÒµ½²Ëµ¥
+		//æ‰¾åˆ°èœå•
 		 Thread.sleep(5000);
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/a")));
 		driver.findElement(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/a")).click();
-		//´ò¿ªĞÂÔöÒ¶Æ¬
+		
+		//æ‰“å¼€æ–°å¢å¶ç‰‡
 		(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/dl/dd[1]/a")));
 		driver.findElement(By.xpath("//*[@id=\"LAY-system-side-menu\"]/li[1]/dl/dd[1]/a")).click();
 		Thread.sleep(5000);
 		
 		driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"LAY_app_body\"]/div[2]/iframe")));
-		System.out.println("µÚ¶ş¸ö "  + driver.manage());
-		  System.out.println("µÚ¶ş¸ö "  + driver.getWindowHandle());
-		WebElement ths= driver.findElement(By.id("adduser"));
-		if(ths == null) {
-			driver.close();     
-		}else {
-			ths.click();
-		}
-		 Thread.sleep(10000);
-		 driver.switchTo().defaultContent();
-		 System.out.println(driver.getWindowHandles());
-		 
-		 WebElement ele = driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]"));
-		 driver.switchTo().frame(ele);
-		/* Set<String> handles = driver.getWindowHandles()	;
-		 for (String windowHandle : handles) {
-		      subWindowHandler = windowHandle;
-		 }*/
-		/* if(subWindowHandler != null && !subWindowHandler.equals(parentWindowHandler)){
-			 driver.switchTo().window(subWindowHandler);
-		     driver.close();
-		     driver.switchTo().window(parentWindowHandler);
-		 }*/
-		 
-		 /*(new WebDriverWait(driver, 10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"layui-layer1\"]")));*/
-		//±£´æ°´Å¥
-		//*[@id="layui-layer1"]/div[3]/a[1]
-		/*(new WebDriverWait(driver, 10)).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id=\"layui-layer1\"]/div[3]/a[1]")));
-		driver.findElement(By.xpath("//*[@id=\"layui-layer1\"]/div[3]/a[1]")).click();
-		*/
-		//¸³Öµ
-		 
-		driver.findElement(By.id("user.USERNAME")).sendKeys("zhangsan1");
-		driver.findElement(By.id("user.EMAIL")).sendKeys("471255559@qq.com");
-		driver.findElement(By.id("user.MOBILE")).sendKeys("18482176779");
-		driver.findElement(By.id("user.PASSWORD")).sendKeys("admin");
-		//×´Ì¬
-		WebElement adrOption=driver.findElement(By.xpath("//select[@id=\"user.ENABLE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", adrOption);
-		
-		//ÓÃ»§ÀàĞÍ 
-		WebElement usertype=driver.findElement(By.xpath("//select[@id=\"user.USERTYPE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", usertype);
-		driver.findElement(By.id("user.REALNAME")).sendKeys("Ê®ÒÚ");
-		//driver.findElement(By.id("user.BIRTHDAY")).sendKeys("0816");
-		WebElement gender=driver.findElement(By.xpath("//select[@id=\"user.GENDER\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", gender); 
-		
-		driver.findElement(By.id("user.IDENTIFY")).sendKeys("513030199908440222");
-		driver.switchTo().defaultContent();
-		//µã»÷±£´æ
-		driver.findElement(By.cssSelector("div.layui-layer layui-layer-iframe > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn0")).click();
-		System.out.println( " &&&&&&&&" +driver.getWindowHandles());
-		
-		//ÅĞ¶ÏÊÇ·ñ±£´æ³É¹¦
-		//³¢ÊÔÈ¥ÕÒµ¯³ö¿ò
-		/*WebElement eleAlter = driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]"));
-		 driver.switchTo().frame(eleAlter);*/
-		//»ñÈ¡Alertµ¯¿ò¶ÔÏó£»
-		Alert promptWindow = null;
-		try {
-			driver.findElement(By.id("layui-layer3"));
-			
-			String st=  driver.findElement(By.cssSelector("#layui-layer3 > div.layui-layer-content.layui-layer-padding")).getText();
-			System.out.println(st);
-			//½ØÍ¼
-		  /*  TestFailListener.operationTakePhoto(driver);
-		    TestFailListener.logInfoStep(st);
-		    Thread.sleep(5000);*/
-			driver.switchTo().defaultContent();
-			System.out.println( " &&&&&&&&" +driver.getWindowHandles());
-			//driver.findElement(By.xpath("//*[@id=\"layui-layer6\"]/div[3]/a")).click();
-			driver.findElement(By.cssSelector("div.layui-layer-dialog > div.layui-layer-btn.layui-layer-btn- > a")).click();;
-			driver.switchTo().defaultContent();
-			//µã»÷È¡Ïû  #layui-layer1 > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn1
-			driver.findElement(By.cssSelector("div.layui-layer layui-layer-iframe > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn1")).click();
-			
-			
-			
-		} catch (NoAlertPresentException e) {
-			System.out.println("³¢ÊÔ²Ù×÷µÄpromptµ¯³ö¿òÎ´ÕÒµ½£¡");
-			e.printStackTrace();
-		}
-		
+		System.out.println("æ²¡æœ‰è¿›å…¥æ–°å¢ å½“å‰æ‰€æœ‰  \n\n\n\n\n " +driver.getWindowHandles() +"\n\n\n");
+		//èµ‹å€¼
+			if(map != null ) {
+				   for (Entry<Integer, ArrayList<String>> m : map.entrySet()) 
+				   {
+					   
+					  System.out.println("key:" + m.getKey() + " value:" + m.getValue());
+					  //è·å–åˆ°å¤´éƒ¨
+					  if(m.getKey() != null && "0".equals(m.getKey().toString())) 
+					  {
+						  if (m.getValue().size()>0) {
+							for(int i =0;i<m.getValue().size();i++) {
+							}
+						}
+					  }
+					  else 
+					  {
+						  //driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user\"]")));
+							System.out.println("ç¬¬äºŒä¸ª "  + driver.manage());
+							  System.out.println("ç¬¬äºŒä¸ª "  + driver.getWindowHandle());
+							java.util.List<WebElement> l = driver.findElements(By.xpath("//form[@id=\"userListForm\"]//a[@id=\"adduser\"]"));
+							  if(l.size()==0) {
+								  driver.switchTo().frame(driver.findElement(By.xpath("//*[@id=\"LAY_app_body\"]/div[2]/iframe")));
+								  WebElement ths= driver.findElement(By.xpath("//form[@id=\"userListForm\"]//a[@id=\"adduser\"]"));
+								  if(ths == null) {
+										driver.close();     
+									}else {
+										ths.click();
+									}
+							  }else {
+								  WebElement ths= driver.findElement(By.xpath("//form[@id=\"userListForm\"]//a[@id=\"adduser\"]"));
+								  if(ths == null) {
+										driver.close();     
+									}else {
+										ths.click();
+									}
+							  }
+							
+							 Thread.sleep(10000);
+							 driver.switchTo().defaultContent();
+							 System.out.println(driver.getWindowHandles());
+							 
+							 WebElement ele = driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]"));
+							 
+							 //WebElement ele = driver.findElement(By.xpath("//form[@id=\"userListForm\"]//a[@id=\"adduser\"]"));
+							 driver.switchTo().frame(ele);
+						    driver.findElement(By.id("user.USERNAME")).sendKeys(m.getValue().get(0));
+							driver.findElement(By.id("user.EMAIL")).sendKeys(m.getValue().get(1));
+							driver.findElement(By.id("user.MOBILE")).sendKeys(m.getValue().get(2));
+							driver.findElement(By.id("user.PASSWORD")).sendKeys(m.getValue().get(3));
+							Thread.sleep(5000);
+							//çŠ¶æ€
+							WebElement Option= driver.findElement(By.xpath("//select[@id=\"user.ENABLE\"]"));
+							System.out.println( ""+ "```===="+Option);
+							String op = "//select[@id=\"user.ENABLE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"";
+							WebElement adrOption=driver.findElement(By.xpath(op+m.getValue().get(4) +"\"]")); 
+							//WebElement adrOption=driver.findElement(By.xpath("//select[@id=\"user.ENABLE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"1\"]"));  
+							((JavascriptExecutor)driver).executeScript("arguments[0].click();", adrOption);
+							
+							//ç”¨æˆ·ç±»å‹ 
+							String type= "//select[@id=\"user.USERTYPE\"]/following-sibling::div[1]/dl/dd[@lay-value=\"";
+							WebElement usertype=driver.findElement(By.xpath(type+m.getValue().get(5)+"\"]"));  
+							((JavascriptExecutor)driver).executeScript("arguments[0].click();", usertype);
+							driver.findElement(By.id("user.REALNAME")).sendKeys(m.getValue().get(6));
+							
+							//driver.findElement(By.id("user.BIRTHDAY")).sendKeys(m.getValue().get(7));
+						    String	genderStr = "//select[@id=\"user.GENDER\"]/following-sibling::div[1]/dl/dd[@lay-value=\"";
+							WebElement gender=driver.findElement(By.xpath( genderStr+m.getValue().get(8)+"\"]"));  
+							((JavascriptExecutor)driver).executeScript("arguments[0].click();", gender); 
+							
+							driver.findElement(By.id("user.IDENTIFY")).sendKeys(m.getValue().get(9));
+							driver.switchTo().defaultContent();
+							//ç‚¹å‡»ä¿å­˜
+							driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]/../../div[@class=\"layui-layer-btn layui-layer-btn-\"]/a[@class=\"layui-layer-btn0\"]")).click();
+							//driver.findElement(By.cssSelector("div.layui-layer layui-layer-iframe > div.layui-layer-btn.layui-layer-btn- > a.layui-layer-btn0")).click();
+							System.out.println( " &&&&&&&&" +driver.getWindowHandles());
+							//åˆ¤æ–­æ˜¯å¦ä¿å­˜æˆåŠŸ
+							//å°è¯•å»æ‰¾å¼¹å‡ºæ¡†
+							//è·å–Alertå¼¹æ¡†å¯¹è±¡ï¼›
+							java.util.List<WebElement> list =	 driver.findElements(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]/../../following-sibling::div"));
+							  if(list.size() != 0 && list.size() >2) {
+								  try {
+										driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]/../../following-sibling::div[3]"));
+										
+										String st=  driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]/../../following-sibling::div[3]//div[2]")).getText();
+										System.out.println(st);
+										//æˆªå›¾
+										driver.switchTo().defaultContent();
+										driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]/../../following-sibling::div[3]//div[3]/a")).click();;
+										driver.switchTo().defaultContent();
+										//ç‚¹å‡»å–æ¶ˆ  
+										driver.findElement(By.xpath("//iframe[@src=\"/cdzx/security/user/add/\"]/../..//div[3]//a[2]")).click();
+										
+										
+									} catch (NoAlertPresentException e) {
+										System.out.println("å°è¯•æ“ä½œçš„promptå¼¹å‡ºæ¡†æœªæ‰¾åˆ°ï¼");
+										e.printStackTrace();
+										break;
+									} 
+								  
+							  }else {
+								  //ä¿å­˜æˆåŠŸ
+								  driver.switchTo().defaultContent();
+								//ç‚¹å‡»å–æ¶ˆ  
+								  driver.findElement(By.xpath("//div[@class=\"layui-layer-btn layui-layer-btn-\"]/a[1]")).click();
+							  }
+							
+					  }
+					  
+					}
+				}
   }
  
   @BeforeMethod
@@ -193,7 +241,9 @@ public class IdAuth extends BaseTest {
   }
 
   @BeforeTest
-  public void beforeTest() {
+  public void beforeTest() throws BiffException, IOException {
+	  //åˆå§‹åŒ–æ•°æ®
+	  map=ReadExcel.excel("E:\\workspace-sts-3.9.6.RELEASE\\mavenDemo\\test.xls","Sheet1");
   }
 
   @AfterTest
